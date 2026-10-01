@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art and Science series</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/research/">Research</a>
+    <a href="/art/">Art</a>
+    <a href="/other/">Other</a>
+    <a href="/contact/">Contact</a>
+</nav>
+
+
+<h1>Art and science series</h1>
+
+<div class="art-gallery">
+
+    
+    <div class="art-piece">
+    <img src="/images/art/LUCA.png"
+        alt="LUCA"
+        oncontextmenu="return false;"
+        onclick="openLightbox(this)">
+    <p class="art-title">LUCA</p>
+</div>
+
+         <div class="art-piece">
+        <img src="/images/art/LUCA2.png"
+             alt="LUCA in eye"
+             oncontextmenu="return false;"
+             onclick="openLightbox(this)">
+        <p class="art-title">Ancestry</p>
+    </div>
+
+
+    <div class="art-piece">
+        <img src="/images/art/jellyfish.png"
+             alt="jellyfishes"
+             oncontextmenu="return false;"
+             onclick="openLightbox(this)">
+        <p class="art-title">Colony</p>
+    </div>
+
+
+
+</div>
+
+
+<!-- Lightbox -->
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+
+    <img id="lightbox-image" src="" alt="">
+
+</div>
+
+
+<script>
+
+function openLightbox(image) {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+
+    lightbox.style.display = "flex";
+}
+
+
+function closeLightbox() {
+
+    const lightbox = document.getElementById("lightbox");
+
+    lightbox.style.display = "none";
+}
+
+</script>
+
+</body>
+
+<footer>
+    <p>© 2026 Elise Loffet</p>
+</footer>
+
+</html>
+
